@@ -1,0 +1,43 @@
+<%= render "form", type: :edit, cat: @cat, button_txt: "Update"%>
+<!-- <form action="<%= cats_url %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="method" value="patch">
+  
+  <label for="name">
+    Name
+    <input id="name" name="cat[name]" type="text" value="<%= @cat.name %>" >
+  </label>
+  <label for="sex">
+    Sex
+    <% if @cat.sex == 'M' %>
+      M<input id="sex" type="radio" name="cat[sex]" value="M" checked>
+      F<input id="sex" type="radio" name="cat[sex]" value="F">
+    <% else %>
+      M<input id="sex" type="radio" name="cat[sex]" value="M">
+      F<input id="sex" type="radio" name="cat[sex]" value="F" checked>
+    <% end %>
+  </label>
+  <label for="color">
+    Color
+    <select id="color">
+      <option value="" disabled="true" selected>Select a color</option>
+      <% Cat.colors.each do |color| %>
+        <option value="<%= color %>" <% if @cat.color == color %>selected<% end %>  > <%= color %> </option>
+      <% end  %>
+    </select>
+  </label>
+  <label for="name">
+    Birthdate
+    <input type="date" id="birth_date" name="cat[birth_date]"
+               value= "<%= @cat.birth_date %>"
+               min="0000-00-00" max=Date.now >
+  </label>
+  <label for="description">
+    Description
+    <input id="description" description="cat[description]" type="textarea" value="<%= @cat.description %>" >
+  </label>
+  
+  <label for="submit">
+    <input type="submit" value="patch">
+  </label>
+</form> -->
